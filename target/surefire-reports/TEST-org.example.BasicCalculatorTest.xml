@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk-13/lib"/>
-    <property name="sun.java.command" value="/home/sulekha/Desktop/JunitDemo/target/surefire/surefirebooter1764335763536596074.jar /home/sulekha/Desktop/JunitDemo/target/surefire 2020-05-10T14-39-23_544-jvmRun1 surefire3353526304570059896tmp surefire_06230052633765133883tmp"/>
+    <property name="sun.java.command" value="/home/sulekha/Desktop/JunitDemo/target/surefire/surefirebooter11731521974210723537.jar /home/sulekha/Desktop/JunitDemo/target/surefire 2020-05-10T15-48-17_649-jvmRun1 surefire12943478975524439600tmp surefire_07934056571107339605tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/sulekha/Desktop/JunitDemo/target/test-classes:/home/sulekha/Desktop/JunitDemo/target/classes:/home/sulekha/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/sulekha/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/sulekha/Desktop/JunitDemo/target/surefire/surefirebooter1764335763536596074.jar"/>
+    <property name="surefire.real.class.path" value="/home/sulekha/Desktop/JunitDemo/target/surefire/surefirebooter11731521974210723537.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="13+33"/>
     <property name="user.name" value="sulekha"/>
@@ -50,5 +50,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="org.example.BasicCalculatorTest" time="0.002"/>
+  <testcase name="shouldAnswerWithTrue" classname="org.example.BasicCalculatorTest" time="0.001"/>
 </testsuite>

@@ -13,7 +13,7 @@ node {
     stage('Build image') {
 
 
-        app = docker.build("81196/calculator")
+        app = docker.build("sulekha05/calci")
     }
 
     stage('Test image') {
@@ -24,11 +24,11 @@ node {
     }
 
     stage('Push image') {
-        docker.withRegistry('https://registry.hub.docker.com', 'sri-docker') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
             }
                 echo "Pushing Docker Build to DockerHub"
     }
-
+}
 
