@@ -1,90 +1,75 @@
 package org.example;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class BasicCalcualator extends JFrame {
-    JTextField t1,t2,t3;
-    JLabel l1,l2,l3;
-    JButton b1,b2,b3,b4;
-    public BasicCalcualator()
-    {
-        super("MyCalculator");
-        t1 = new JTextField(12);
-        t2 = new JTextField(12);
-        t3 = new JTextField(12);
+import java.util.Scanner;
 
-        l1 = new JLabel(" First Number: ");
-        l2 = new JLabel(" Second Number: ");
-        l3 = new JLabel(" Result: ");
-
-        b1 = new JButton(" Addition ");
-        b2 = new JButton(" Subtraction ");
-        b3 = new JButton(" Multiplication ");
-        b4 = new JButton(" Division ");
-
-        add(l1);
-        add(t1);
-        add(l2);
-        add(t2);
-        add(b1);
-        add(b2);
-        add(b3);
-        add(b4);
-        add(l3);
-        add(t3);
-
-        b1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double num1 =Double.parseDouble(t1.getText());
-                double num2 =Double.parseDouble(t2.getText());
-                double res = num1+num2;
-                t3.setText(res+"");
-            }
-        });
-
-        b2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double num1 =Double.parseDouble(t1.getText());
-                double num2 =Double.parseDouble(t2.getText());
-                double res = num1-num2;
-                t3.setText(res+"");
-            }
-        });
-        b3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double num1 =Double.parseDouble(t1.getText());
-                double num2 =Double.parseDouble(t2.getText());
-                double res = num1*num2;
-                t3.setText(res+"");
-            }
-        });
-        b4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double num1 =Double.parseDouble(t1.getText());
-                double num2 =Double.parseDouble(t2.getText());
-                double res = num1/num2;
-                t3.setText(res+"");
-            }
-        });
-
-        setLayout(new FlowLayout());
-        setVisible(true);
-        setSize(300, 300);
-
-
-    }
-
+public class BasicCalcualator {
     public static void main(String[] args) {
-        BasicCalcualator bc = new BasicCalcualator();
-        bc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        return;
+        int flag=0,ch;
+        double num1,num2;
+        Scanner reader = new Scanner(System.in);
+        System.out.println(" My Calculator ");
+        do
+        {
+            System.out.println("Option Menu");
+            System.out.println();
+            System.out.println("1) Addition");
+            System.out.println("2) Subtraction");
+            System.out.println("3) Multiplication");
+            System.out.println("4) Division");
+            System.out.println("5) Exit");
+            System.out.print("Enter your choice: ");
+            ch = reader.nextInt();
+            if(ch==5)
+            {
+                flag = 1;
+            }
+            else
+            {
+                switch(ch)
+                {
+                    case 1:
+                        System.out.println("Addition");
+                        System.out.println("Enter two numbers");
+                        System.out.print("Enter number 1: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter number 2: ");
+                        num2 = reader.nextDouble();
+                        System.out.println(num1+num2);
+                        break;
+                    case 2:
+                        System.out.println("Subtraction");
+                        System.out.println("Enter two numbers");
+                        System.out.print("Enter number 1: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter number 2: ");
+                        num2 = reader.nextDouble();
+                        System.out.println(num1-num2);
+                        break;
+                    case 3:
+                        System.out.println("Multiplication");
+                        System.out.println("Enter two numbers");
+                        System.out.print("Enter number 1: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter number 2: ");
+                        num2 = reader.nextDouble();
+                        System.out.println(num1*num2);
+                        break;
+                    case 4:
+                        System.out.println("Division");
+                        System.out.println("Enter two numbers");
+                        System.out.print("Enter number 1: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter number 2: ");
+                        num2 = reader.nextDouble();
+                        System.out.println(num1/num2);
+                        break;
+                    default: System.out.println("Exiting program due to invalid input");
+                        flag=1;
+                }
+            }
+            System.out.println("\n");
+        }while(flag==0);
     }
 
 }
