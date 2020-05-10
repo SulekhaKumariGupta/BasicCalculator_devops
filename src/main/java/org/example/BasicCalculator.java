@@ -3,7 +3,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class BasicCalcualator {
+public class BasicCalculator {
     public static void main(String[] args) {
         int flag=0,ch;
         double num1,num2;
@@ -64,7 +64,7 @@ public class BasicCalcualator {
                         num2 = reader.nextDouble();
                         System.out.println(num1/num2);
                         break;
-                    default: System.out.println("Exiting program due to invalid input");
+                    default: System.out.println("INVALID INPUT !!! EXITING ....");
                         flag=1;
                 }
             }
